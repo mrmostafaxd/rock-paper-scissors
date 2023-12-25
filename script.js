@@ -19,42 +19,33 @@ function playRound(playerSelection, computerSelection) {
     case 'rock':
       switch (computerSelection) {
         case 'paper':
-          return 'You Lose! Paper defeats Rock';
+          return { value: -1, message: 'You Lose! Paper defeats Rock' };
 
         case 'scissors':
-          return 'You Win! Rock beats Scissors';
-
-        default:
-          return 'Draw!';
+          return { value: 1, message: 'You Win! Rock beats Scissors' };
       }
 
     case 'paper':
       switch (computerSelection) {
         case 'scissors':
-          return 'You Lose! Scissors defeat Paper';
+          return { value: -1, message: 'You Lose! Scissors defeat Paper' };
 
         case 'rock':
-          return 'You Win! Paper beats Rock';
-
-        default:
-          return 'Draw!';
+          return { value: 1, message: 'You Win! Paper beats Rock' };
       }
 
     case 'scissors':
       switch (computerSelection) {
         case 'rock':
-          return 'You Lose! Rock defeats Scissors';
+          return { value: -1, message: 'You Lose! Rock defeats Scissors' };
 
         case 'paper':
-          return 'You Win! Scissors beat Paper';
-
-        default:
-          return 'Draw!';
+          return { value: 1, message: 'You Win! Scissors beat Paper' };
       }
 
     default:
       if (playerSelection === computerSelection) {
-        return 'Draw!';
+        return { value: 0, message: 'Draw!' };
       }
   }
 }
