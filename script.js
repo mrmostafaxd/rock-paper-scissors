@@ -23,6 +23,9 @@ function playRound(playerSelection, computerSelection) {
 
         case 'scissors':
           return { value: 1, message: 'You Win! Rock beats Scissors' };
+
+        default:
+          return { value: 0, message: 'Draw!' };
       }
 
     case 'paper':
@@ -32,6 +35,9 @@ function playRound(playerSelection, computerSelection) {
 
         case 'rock':
           return { value: 1, message: 'You Win! Paper beats Rock' };
+
+        default:
+          return { value: 0, message: 'Draw!' };
       }
 
     case 'scissors':
@@ -41,11 +47,12 @@ function playRound(playerSelection, computerSelection) {
 
         case 'paper':
           return { value: 1, message: 'You Win! Scissors beat Paper' };
+
+        default:
+          return { value: 0, message: 'Draw!' };
       }
 
     default:
-      if (playerSelection === computerSelection) {
-        return { value: 0, message: 'Draw!' };
-      }
+      return null;
   }
 }
