@@ -56,3 +56,26 @@ function playRound(playerSelection, computerSelection) {
       return null;
   }
 }
+
+function game() {
+  let finalScore = 0;
+  for (let currentRound = 0; currentRound < 5; currentRound++) {
+    const playerSelection = prompt('Enter your move!', '').trim();
+    const computerSelection = getComputerChoice();
+    const roundResult = playRound(playerSelection, computerSelection);
+    finalScore += roundResult.value;
+    console.log(`ROUND ${currentRound + 1}`);
+    console.log(roundResult.message);
+    console.log('');
+  }
+
+  if (finalScore === 0) {
+    console.log('Final Result is: Draw');
+  } else if (finalScore > 0) {
+    console.log('Final Result is Winning');
+  } else {
+    console.log('Final Result is Losing');
+  }
+}
+
+game();
