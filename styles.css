@@ -59,7 +59,7 @@ h1 {
 }
 
 .display,
-.control-icon {
+.control-btn {
   background-color: #0b405a;
 }
 
@@ -91,19 +91,20 @@ h1 {
   gap: 40px;
 }
 
-.control-icon {
+.control-btn {
   font-size: 40px;
   padding: 20px;
+  border: none;
   border-radius: 50%;
   transition: transform 0.2s;
   user-select: none;
 }
 
-.control-icon:hover {
+.control-btn:hover {
   transform: scale(1.15);
 }
 
-.control-icon:active {
+.control-btn:active {
   background-color: #082f42;
 }
 
