@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+@font-face {
+  font-family: 'Bangers';
+  src: url('./fonts/Bangers.ttf');
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8ebc9;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  font-size: 72px;
+  color: #d05228;
+  font-family: 'Bangers';
+  letter-spacing: 3px;
+}
+
+.move {
+  font-size: 120px;
+}
+
+.score {
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #eee;
+}
+
+.result {
+  font-weight: bold;
+  font-size: 62px;
+  font-family: 'Bangers', Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 2px;
+}
+
+.display-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: 50px auto;
+}
+
+.display {
+  background-color: #0b405a;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
+}
+
+.score-container {
+  padding: 20px;
+  background-color: #082d3f;
+  color: white;
+}
+
+.move-container {
+  padding: 20px;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.control-icon {
+  background-color: #0b405a;
+  font-size: 40px;
+  padding: 20px;
+  border-radius: 50%;
+  transition: transform 0.2s; /* Animation */
+  user-select: none;
+}
+
+.control-icon:hover {
+  transform: scale(1.15);
+}
+
+.control-icon:active {
+  background-color: #082f42;
+}
+
+.win {
+  color: green;
+}
+
+.lose {
+  color: red;
+}
