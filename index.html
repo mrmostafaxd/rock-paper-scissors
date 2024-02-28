@@ -11,10 +11,10 @@
     <div class="display-container">
       <div class="display">
         <div class="score-container">
-          <div id="user-score" class="score">You: 0</div>
+          <div id="player-score" class="score">You: 0</div>
         </div>
         <div class="move-container">
-          <div id="user-move" class="move">✊</div>
+          <div id="player-move" class="move">❔</div>
         </div>
       </div>
       <div class="display">
@@ -22,17 +22,19 @@
           <div id="computer-score" class="score">Computer: 0</div>
         </div>
         <div class="move-container">
-          <div id="computer-move" class="move">✊</div>
+          <div id="computer-move" class="move">❔</div>
         </div>
       </div>
     </div>
     <div class="result-container">
-      <div id="result" class="result win">&nbsp;</div>
+      <div id="result" class="result">&nbsp;</div>
     </div>
-    <div class="controls-container">
-      <button id="rock" class="control-btn">✊</button>
-      <button id="paper" class="control-btn">✋</button>
-      <button id="scissors" class="control-btn">✌️</button>
+    <div class="controls-container" id="controls-container">
+      <button id="rock" data-choice="rock" class="control-btn">✊</button>
+      <button id="paper" data-choice="paper" class="control-btn">✋</button>
+      <button id="scissors" data-choice="scissors`" class="control-btn">
+        ✌️
+      </button>
     </div>
     <script src="script.js"></script>
   </body>
